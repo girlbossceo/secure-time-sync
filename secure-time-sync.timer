@@ -1,0 +1,9 @@
+[Unit]
+Description=Secure time sync every 5 minutes
+Requires=secure-time-sync.service
+
+[Timer]
+OnCalendar=*:0/5
+
+[Install]
+WantedBy=timers.target

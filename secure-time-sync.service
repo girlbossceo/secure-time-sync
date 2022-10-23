@@ -1,0 +1,11 @@
+[Unit]
+Description=Secure time sync
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/secure-time-sync
+
+[Install]
+WantedBy=sysinit.target
